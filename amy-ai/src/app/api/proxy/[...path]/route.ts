@@ -13,8 +13,20 @@ function backendUrl(path: string[]): string {
   return `${base.replace(/\/$/, "")}/${path.join("/")}`;
 }
 
-async function proxy(req: NextRequest, params: { path?: string[] }) {
-  const path = params.path ?? [];
+async function proxy(
+  req: NextRequest,
+  ctx: { params?: { path?: string[] } },
+) {
+  // Defensive: Next.js passes dynamic segments via ctx.params; if the route
+  // handler signature is ever mismatched we must not silently hit "/" on the
+  // backend (that produced mysterious 404s).
+  const path = ctx?.params?.path ?? [];
+  if (path.length === 0) {
+    return NextResponse.json(
+      { detail: "Proxy usage: /api/proxy/<backend-path>" },
+      { status: 400 },
+    );
+  }
   const url = backendUrl(path);
   const token = cookies().get(COOKIE_NAME)?.value;
 
@@ -42,7 +54,7 @@ async function proxy(req: NextRequest, params: { path?: string[] }) {
     );
   }
 
-  // Auth endpoints: FastAPI returns { access_token, token_type }
+  // Auth endpoints: backend returns { access_token | token, user }.
   // Move it into an httpOnly cookie and strip it from the JSON body.
   const joined = path.join("/");
   if (
@@ -50,12 +62,18 @@ async function proxy(req: NextRequest, params: { path?: string[] }) {
     (joined.startsWith("auth/login") || joined.startsWith("auth/register"))
   ) {
     const data = await upstream.json().catch(() => null);
-    if (data && typeof data.access_token === "string") {
+    const tok =
+      data && typeof data.access_token === "string"
+        ? data.access_token
+        : data && typeof data.token === "string"
+          ? data.token
+          : null;
+    if (tok) {
       const res = NextResponse.json(
         { user: data.user ?? null, ok: true },
         { status: upstream.status },
       );
-      res.cookies.set(COOKIE_NAME, data.access_token, {
+      res.cookies.set(COOKIE_NAME, tok, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
