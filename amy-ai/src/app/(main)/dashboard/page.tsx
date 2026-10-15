@@ -96,7 +96,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-
-export function CoursePrice({ poisha }: { poisha: number }) {
-  return <span>{formatBDT(poisha)}</span>;
-}

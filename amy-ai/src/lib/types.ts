@@ -7,6 +7,8 @@ export interface User {
   full_name: string;
   role: "student" | "admin";
   avatar_url?: string | null;
+  phone?: string | null;
+  preferred_language?: "en" | "bn" | null;
 }
 
 export interface UserProgress {
