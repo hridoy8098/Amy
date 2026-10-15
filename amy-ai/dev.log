@@ -1,0 +1,142 @@
+nohup: ignoring input
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 4s
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 1054ms (73 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 11.8s (851 modules)
+ GET /login 200 in 12882ms
+ ✓ Compiled in 1270ms (414 modules)
+ GET /login 200 in 26ms
+ GET /login 200 in 27ms
+ ○ Compiling /api/proxy/[...path] ...
+ ✓ Compiled /api/proxy/[...path] in 1065ms (461 modules)
+ POST /api/proxy/auth/login 200 in 1640ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1535ms (883 modules)
+ GET /api/proxy/profile/me/progress 404 in 98ms
+ GET /api/proxy/courses/enrollments 422 in 97ms
+ GET /api/proxy/notifications 200 in 65ms
+ GET /api/proxy/courses 200 in 68ms
+ GET /api/proxy/profile/me/progress 404 in 42ms
+ GET /api/proxy/courses/enrollments 422 in 41ms
+ GET /api/proxy/notifications 200 in 20ms
+ ○ Compiling /courses ...
+ ✓ Compiled /courses in 592ms (889 modules)
+ GET /courses 200 in 861ms
+ GET /api/proxy/profile/me/progress 404 in 80ms
+ GET /api/proxy/courses 200 in 109ms
+ GET /api/proxy/auth/me 200 in 169ms
+ GET /api/proxy/notifications 200 in 185ms
+ GET /api/proxy/auth/me 200 in 106ms
+ GET /api/proxy/profile/me/progress 404 in 31ms
+ GET /api/proxy/notifications 200 in 23ms
+ ○ Compiling /courses/[id] ...
+ ✓ Compiled /courses/[id] in 553ms (895 modules)
+ GET /courses/4 200 in 1218ms
+ GET /api/proxy/profile/me/progress 404 in 109ms
+ GET /api/proxy/courses/4 200 in 150ms
+ GET /api/proxy/enrollments 405 in 131ms
+ GET /api/proxy/auth/me 200 in 130ms
+ GET /api/proxy/notifications 200 in 185ms
+ GET /api/proxy/auth/me 200 in 14ms
+ GET /api/proxy/profile/me/progress 404 in 26ms
+ GET /api/proxy/enrollments 405 in 21ms
+ GET /api/proxy/notifications 200 in 72ms
+ ○ Compiling /amy ...
+ ✓ Compiled /amy in 571ms (901 modules)
+ GET /amy 200 in 747ms
+ GET /api/proxy/profile/me/progress 404 in 91ms
+ GET /api/proxy/amy/sessions 404 in 95ms
+ GET /api/proxy/auth/me 200 in 58ms
+ GET /api/proxy/notifications 200 in 107ms
+ GET /api/proxy/amy/sessions 404 in 25ms
+ GET /api/proxy/auth/me 200 in 87ms
+ GET /api/proxy/profile/me/progress 404 in 26ms
+ GET /api/proxy/notifications 200 in 20ms
+ GET /login 200 in 123ms
+ POST /api/proxy/auth/login 200 in 213ms
+ GET /amy 200 in 100ms
+ GET /api/proxy/profile/me/progress 404 in 76ms
+ GET /api/proxy/amy/sessions 404 in 85ms
+ GET /api/proxy/auth/me 200 in 88ms
+ GET /api/proxy/notifications 200 in 91ms
+ GET /api/proxy/amy/sessions 404 in 76ms
+ GET /api/proxy/auth/me 200 in 80ms
+ GET /api/proxy/profile/me/progress 404 in 28ms
+ GET /api/proxy/notifications 200 in 57ms
+ POST /api/proxy/amy/chat/stream 404 in 84ms
+ POST /api/proxy/amy/chat 404 in 20ms
+ ○ Compiling /payment ...
+ ✓ Compiled /payment in 4.3s (903 modules)
+ GET /payment?course_id=4 200 in 4774ms
+ GET /api/proxy/profile/me/progress 404 in 164ms
+ GET /api/proxy/auth/me 200 in 171ms
+ GET /api/proxy/notifications 200 in 89ms
+ GET /api/proxy/courses/4 200 in 99ms
+ GET /api/proxy/payments/mine 404 in 102ms
+ GET /api/proxy/auth/me 200 in 183ms
+ GET /api/proxy/profile/me/progress 404 in 40ms
+ GET /api/proxy/notifications 200 in 19ms
+ GET /api/proxy/payments/mine 404 in 13ms
+ ○ Compiling /progress ...
+ ✓ Compiled /progress in 9.7s (1893 modules)
+ GET /progress 200 in 10112ms
+ GET /api/proxy/profile/me/progress 404 in 114ms
+ GET /api/proxy/analytics/me/daily-xp 404 in 105ms
+ GET /api/proxy/auth/me 200 in 182ms
+ GET /api/proxy/notifications 200 in 100ms
+ GET /api/proxy/auth/me 200 in 84ms
+ GET /api/proxy/profile/me/progress 404 in 48ms
+ GET /api/proxy/analytics/me/daily-xp 404 in 36ms
+ GET /api/proxy/notifications 200 in 17ms
+ ○ Compiling /profile ...
+ ✓ Compiled /profile in 1101ms (1899 modules)
+ GET /profile 200 in 1309ms
+ GET /api/proxy/profile/me/progress 404 in 100ms
+ GET /api/proxy/auth/me 200 in 100ms
+ GET /api/proxy/notifications 200 in 112ms
+ GET /api/proxy/auth/me 200 in 116ms
+ GET /api/proxy/profile/me/progress 404 in 37ms
+ GET /api/proxy/notifications 200 in 65ms
+ GET /login 200 in 120ms
+ POST /api/proxy/auth/login 200 in 40ms
+ ○ Compiling /admin/analytics ...
+ ✓ Compiled /admin/analytics in 2.2s (1905 modules)
+ GET /api/proxy/courses/enrollments 422 in 2012ms
+ GET /api/proxy/profile/me/progress 404 in 2114ms
+ GET /api/proxy/notifications 200 in 2101ms
+ GET /api/proxy/courses 200 in 2103ms
+ GET /admin/analytics 200 in 3092ms
+ GET /api/proxy/profile/me/progress 404 in 104ms
+ GET /api/proxy/auth/me 200 in 100ms
+ GET /api/proxy/notifications 200 in 89ms
+ GET /api/proxy/auth/me 200 in 92ms
+ GET /api/proxy/courses/enrollments 422 in 92ms
+ GET /api/proxy/courses 200 in 90ms
+ GET /api/proxy/profile/me/progress 404 in 27ms
+ GET /api/proxy/notifications 200 in 22ms
+ GET /api/proxy/courses/enrollments 422 in 36ms
+ GET /login 200 in 119ms
+ POST /api/proxy/auth/login 200 in 56ms
+ GET /dashboard 200 in 89ms
+ ○ Compiling /courses ...
+ ✓ Compiled /courses in 1719ms (993 modules)
+ GET /courses 200 in 1949ms
+ GET /progress 200 in 151ms
+ GET /payment?course_id=4 200 in 49ms
+ GET /profile 200 in 41ms
+ POST /api/proxy/auth/login 200 in 32ms
+ GET /dashboard 200 in 96ms
+ GET /courses 200 in 90ms
+ GET /progress 200 in 88ms
+ GET /payment?course_id=4 200 in 90ms
+ GET /profile 200 in 83ms
+ GET /admin/analytics 200 in 95ms
+ POST /api/proxy/auth/login 200 in 42ms
+ GET /admin/analytics 200 in 97ms

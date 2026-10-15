@@ -1,0 +1,80 @@
+/* Amy AI — theme custom properties (ported from the Vue app's CSS variables) */
+:root {
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --surface-2: #eef0f5;
+  --text: #16181d;
+  --text-muted: #6b7280;
+  --border: #e2e5ec;
+  --primary: #58cc02;        /* Duolingo-style green */
+  --primary-hover: #4cad02;
+  --accent: #1cb0f6;         /* blue accent */
+  --danger: #ff4b4b;
+  --warning: #ffc600;
+  --xp-bar-bg: #e5e7eb;
+  --streak-orange: #ff9600;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --radius: 14px;
+}
+
+.dark {
+  --bg: #13151a;
+  --surface: #1c1f26;
+  --surface-2: #262a33;
+  --text: #f3f4f6;
+  --text-muted: #9aa2b1;
+  --border: #313642;
+  --primary: #58cc02;
+  --primary-hover: #6ee007;
+  --accent: #1cb0f6;
+  --danger: #ff6b6b;
+  --warning: #ffd400;
+  --xp-bar-bg: #313642;
+  --streak-orange: #ff9600;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Utility classes used across components */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.05s ease;
+}
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.input {
+  display: block;
+  width: 100%;
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.input:focus { border-color: var(--primary); }
+.input::placeholder { color: var(--text-muted); }
+
+.text-muted { color: var(--text-muted); }
